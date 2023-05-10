@@ -8,6 +8,4 @@ module "jenkins" {
     project_name = module.network.project_name
     public_subnet = module.network.public_subnet_id
     jenkins_sg = module.network.jenkins_sg
-
-  
 }
