@@ -11,3 +11,4 @@ variable "public_cidr" {
 variable "my_ip" {
     default = "176.62.18.149"
 }
+variable "jenkins_instance" {}

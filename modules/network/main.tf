@@ -37,6 +37,11 @@ resource "aws_route_table" "public_route" {
     }
 }
 
+resource "aws_eip" "jenkins_eip" {
+  vpc = true
+  instance = var.jenkins_instance
+}
+
 resource "aws_route_table_association" "public_association" {
     subnet_id = aws_subnet.public_subnet.id
     route_table_id = aws_route_table.public_route.id
