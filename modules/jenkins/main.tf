@@ -11,7 +11,7 @@ resource "aws_key_pair" "jenkins_key_pair" {
 
 resource "local_file" "save_key_jenkins" {
     content = tls_private_key.private_key.private_key_pem
-    filename = "jenkins-key.pem"
+    filename = "jenkins-server-key.pem"
 }
 
 data "aws_ami" "ubuntu" {
